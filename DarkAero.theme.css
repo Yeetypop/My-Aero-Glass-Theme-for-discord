@@ -375,7 +375,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 	height: 48px;
 	position: fixed;
 	border-radius: 50px;
-	box-shadow: inset 0 0 0 1px rgba(108, 255, 105, 0.4), inset 0 0 0 2px rgba(161, 255, 251, 0.4) !important;
+	box-shadow: inset 0 0 0 1px rgba(255, 111, 143, 0.4), inset 0 0 0 2px rgba(255, 111, 143, 0.4) !important;
 	transition: background 0.2s ease-out, border-radius 0.2s ease-out !important;
 }
 
@@ -882,7 +882,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 /*creates aero effect for main chat area, atleast it does something related to the whole thing*/
 
 .chat_f75fb0 {
-	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) ), var(--server-folder-color) !important;
 	box-shadow: var(--liquid-glass-shadow) !important;
 	border-radius: var(--popout-radius) !important;
 	overflow: hidden !important;
@@ -911,7 +911,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 /*creates aero effect for friends listed in middle panel*/
 
 .peopleListItem_cc6179 {
-	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
 	box-shadow: var(--liquid-glass-shadow) !important;
 	border-radius: var(--message-radius) !important;
 	margin: 4px 8px !important;
@@ -932,7 +932,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 /*creates aero effect for individual DM people list*/
 
 .channel__972a0.dm__972a0 {
-	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
 	box-shadow: var(--liquid-glass-shadow) !important;
 	border-radius: var(--popout-radius) !important;
 	margin: 2px 4px !important;
@@ -943,7 +943,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 
 .channel__972a0.container_e45859:not(.dm__972a0):has(a[href="/channels/@me"]),
 .channel__972a0.container_e45859:not(.dm__972a0):has(a[href="/quest-home"]) {
-	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
 	box-shadow: var(--liquid-glass-shadow) !important;
 	border-radius: var(--popout-radius) !important;
 	margin: 2px 6px !important;
