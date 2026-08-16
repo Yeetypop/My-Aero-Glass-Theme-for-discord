@@ -57,7 +57,7 @@
 
 :root {
 	/* APP ELEMENTS */
-	--app-bg: url(https://cdn.discordapp.com/attachments/1311061044310970499/1537712329351897138/asadal.jpg?ex=6a815b34&is=6a8009b4&hm=301eacb485912b8f4cc70fd033e78145b9ea5780ff19d45c595906c0ea269c0c&);
+	--app-bg: url(https://raw.githubusercontent.com/Yeetypop/My-Aero-Glass-Theme-for-discord/2981058d1c231e6404c875a4138e33ab126003d3/asset/dMRba0i.jpeg);
 	--app-blur: 6px;
 	--app-margin: 0px;
 	--app-radius: 8px;
@@ -673,7 +673,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 
 
 
-/*COLORED BORDER BASED ON USER STATUS FOR MAIN CHAT, USES CUSTOM .TS FILE WHICH IS AT "C:\Users\Cain\Documents\Vencord\src\userplugins\chatAvatarStatus\index.ts"*/
+/*COLORED BORDER BASED ON USER STATUS FOR MAIN CHAT, USES CUSTOM .TS FILE (plugin file)*/
 
 /* removes weird border glitch*/
 
