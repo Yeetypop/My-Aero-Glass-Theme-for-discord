@@ -1,0 +1,18 @@
+/* NORMAL OFFLINE MEMBER */
+
+#app-mount .member__5d473.offline__5d473 .wrapper__44b0c {
+    color: var(--rs-offline-color) !important;
+    opacity: 0.6 !important;
+    border: none !important;
+    box-shadow: 0 0 0 2px var(--rs-offline-color), 0 0 4px 4px var(--rs-offline-color) !important;
+}
+
+
+/* SELECTED OFFLINE MEMBER */
+
+#app-mount .member__5d473.offline-selected-fix .wrapper__44b0c {
+    color: var(--rs-offline-color) !important;
+    opacity: 0.6 !important;
+    border: none !important;
+    box-shadow: 0 0 0 2px var(--rs-offline-color), 0 0 4px 4px var(--rs-offline-color) !important;
+}
