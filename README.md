@@ -13,12 +13,12 @@ IDEALLY USE A TEXT EDITOR LIKE VISUAL STUDIO, YOU CAN SEE THAT THE THEMES HAVE M
 MOST PARTS OF THIS THEME ARE LABELLED TO SHOW WHAT THEY DO, THOUGH SOME PARTS IM NOT ENTIRELY SURE - EXPLICITELY MENTIONED
 
 THEMES I HAVE RIPPED PARTS FROM TO MAKE THIS FUNCTIONAL:
-[SkeuoCord](https://betterdiscord.app/themes/SkeuoCord)
-[OldCord](https://betterdiscord.app/themes/OldCord)  - [Newer Version of OldCord](https://betterdiscord.app/themes/DTM-16)
-[Translucence](https://betterdiscord.app/themes/Translucence)
-[Discord Square Theme](https://github.com/craftablescience/Discord-Square-Theme)
-[Radial Status](https://betterdiscord.app/themes/RadialStatus)
-i couldnt find the original link to "animated blur.css" since ive had it for a while and didnt need to reinstall it, atleast the source is there with the authors name in it so
+1. [SkeuoCord](https://betterdiscord.app/themes/SkeuoCord)
+2. [OldCord](https://betterdiscord.app/themes/OldCord)  - [Newer Version of OldCord](https://betterdiscord.app/themes/DTM-16)
+3. [Translucence](https://betterdiscord.app/themes/Translucence)
+4. [Discord Square Theme](https://github.com/craftablescience/Discord-Square-Theme)
+5. [Radial Status](https://betterdiscord.app/themes/RadialStatus)
+6. i couldnt find the original link to "animated blur.css" since ive had it for a while and didnt need to reinstall it, atleast the source is there with the authors name in it so
 
 
 THIS THEME HEAVILY DEPENDS ON THE THEME TRANSLUCENCE
