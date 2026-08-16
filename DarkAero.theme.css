@@ -1258,7 +1258,9 @@ button.button_e131a9 {
 	/*add custom border color for groups instead of pure white*/
 	/*make the new radial status in voice channels actually correspond to user status*/
 	/*center the typing anim on peoples profiles*/
-	/*get an actually functioning background that wont break within like 3 damn days*/
 	/*in DMs, person title at top is broken, border issue?*/
 	/*Friends client panel, borders missing glows for middle section and DM list*/
 	/*remove the activity panel on the server members list area, i really hate it*/
+	/*maybe find an image for the DM button, or leave it as invis, its not so bad*/
+	/*adjust color settings for dark theme*/
+	/*make the aero glass a bit darker for all*/
