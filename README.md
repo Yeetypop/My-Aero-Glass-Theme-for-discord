@@ -28,3 +28,14 @@ i couldnt find the original link to "animated blur.css" since ive had it for a w
 THIS THEME HEAVILY DEPENDS ON THE THEME TRANSLUCENCE
 
 CURRENT ISSUE IVE FOUND WITH ONE OF THE PLUGINS IS THAT AFTER A WHILE IT REQUIRES TO BE TURNED OFF THEN BACK ON AGAIN TO FUNCTION: "offlineSelectedRing"
+
+## Features
+
+1. Liquid Glass effect on most UI - looks weird/not needed in some areas
+2. Profile Icons or Group Icons are now square - should be everywhere
+3. Animated Server hover/click effect to the icon - circle to square, with shadows working for it
+4. Server Icons have borders on the sidebar
+5. Extra icons such as Add Server or the DM button use custom images or are transparent
+6. Adds old "DISCORD" text from older versions back to the top left
+7. Removes the trash server text at the top in the new UI
+8. Radial Statuses that work with the Square Profile Icons
