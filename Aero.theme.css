@@ -57,7 +57,7 @@
 
 :root {
 	/* APP ELEMENTS */
-	--app-bg: url(https://cdn.discordapp.com/attachments/1311061044310970499/1537712329351897138/asadal.jpg?ex=6a815b34&is=6a8009b4&hm=301eacb485912b8f4cc70fd033e78145b9ea5780ff19d45c595906c0ea269c0c&);
+	--app-bg: url(https://raw.githubusercontent.com/Yeetypop/My-Aero-Glass-Theme-for-discord/2981058d1c231e6404c875a4138e33ab126003d3/asset/asadal.jpg);
 	--app-blur: 6px;
 	--app-margin: 0px;
 	--app-radius: 8px;
@@ -445,7 +445,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 /*allows the use of custom icons for the discord DM button*/
 
 .tutorialContainer__1f388 .wrapper__6e9f8 .childWrapper__6e9f8 {
-	background: url("https://cdn.discordapp.com/attachments/1311061044310970499/1537769959608815626/msn.png?ex=6a803f60&is=6a7eede0&hm=d76bb59c65c905fbf947ecb8e450c76c494e107df44ce1762180e7020ec02a94&") center / cover no-repeat !important;
+	background: url("https://raw.githubusercontent.com/Yeetypop/My-Aero-Glass-Theme-for-discord/2981058d1c231e6404c875a4138e33ab126003d3/asset/msn.png") center / cover no-repeat !important;
 }
 
 /*removes the discord icon from the discord DM button*/
@@ -673,7 +673,7 @@ div[class*="callContainer"] div[class*="wrapper"]::after {
 
 
 
-/*COLORED BORDER BASED ON USER STATUS FOR MAIN CHAT, USES CUSTOM .TS FILE WHICH IS AT "C:\Users\Cain\Documents\Vencord\src\userplugins\chatAvatarStatus\index.ts"*/
+/*COLORED BORDER BASED ON USER STATUS FOR MAIN CHAT, USES CUSTOM .TS FILE (plugin file)*/
 
 /* removes weird border glitch*/
 
