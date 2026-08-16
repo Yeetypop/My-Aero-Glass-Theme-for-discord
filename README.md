@@ -1,4 +1,6 @@
-/////    THIS THEME WAS BUILT USING VENCORD, ASSUME THAT THIS DIFFERS ON BETTERDISCORD    /////
+# My Aero Glass Theme for Discord
+
+### THIS THEME WAS BUILT USING VENCORD, ASSUME THAT THIS DIFFERS ON BETTERDISCORD
 
 FOR VENCORD USERS, THIS THEME REQUIRED 3 CUSTOM PLUGINS SO FAR INORDER TO MAKE IT FUNCTION, I DO NOT KNOW IF I CAN MAKE IT PURELY CSS
 FOR CUSTOM PLUGINS, I *THINK* THAT YOU NEED A SOURCE BUILT VERSION OF VENCORD: 
@@ -11,7 +13,7 @@ IDEALLY USE A TEXT EDITOR LIKE VISUAL STUDIO, YOU CAN SEE THAT THE THEMES HAVE M
 MOST PARTS OF THIS THEME ARE LABELLED TO SHOW WHAT THEY DO, THOUGH SOME PARTS IM NOT ENTIRELY SURE - EXPLICITELY MENTIONED
 
 THEMES I HAVE RIPPED PARTS FROM TO MAKE THIS FUNCTIONAL:
-SKEUOCORD: https://betterdiscord.app/themes/SkeuoCord
+[SkeuoCord](https://betterdiscord.app/themes/SkeuoCord)
 OLDCORD: https://betterdiscord.app/themes/DTM-16  - originally ripped from https://betterdiscord.app/themes/OldCord but if you wanted to use the updated functional version then use the first link
 TRANSLUCENCE: https://betterdiscord.app/themes/Translucence
 DISCORD SQUARE THEME: https://github.com/craftablescience/Discord-Square-Theme
