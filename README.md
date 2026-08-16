@@ -39,3 +39,6 @@ CURRENT ISSUE IVE FOUND WITH ONE OF THE PLUGINS IS THAT AFTER A WHILE IT REQUIRE
 6. Adds old "DISCORD" text from older versions back to the top left
 7. Removes the trash server text at the top in the new UI
 8. Radial Statuses that work with the Square Profile Icons
+9. Adds border/glows to Profile Icons that change depending on User Status
+10. Removes colored area of a participant in a voice channel - transparent
+11. Removes banner area of a persons profile - transparent
