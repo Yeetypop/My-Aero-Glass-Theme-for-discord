@@ -1,1 +1,1264 @@
+/**
+ * @name My Dark Aero
+ * @version 1.0.0
+ * @description A Dark Aero theme for Discord.
+ * @author Yeetypop
+ *
+ * @website https://steamcommunity.com/id/YeetypopLOLOLOL/
+ * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Translucence/css/source.css
+ */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main backend for this theme, contains whole source from Translucence*/
+@import url(https://capnkitten.github.io/BetterDiscord/Themes/Translucence/css/source.css);
+/*font, taken from animated blur css*/
+@import url("https://eject37.github.io/DiscordTheme/BetterFont.css");
+/*font, taken from animated blur css*/
+@import url("https://eject37.github.io/DiscordTheme/HideTrash.css");
+/*introduces square status icon replacement instead of default cirlce*/
+@import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BACKEND FOR THEMES CUSTOMISATION, from Translucence*/
+
+:root {
+	/* APP ELEMENTS */
+	--app-bg: url(https://cdn.discordapp.com/attachments/1311061044310970499/1537712329351897138/asadal.jpg?ex=6a815b34&is=6a8009b4&hm=301eacb485912b8f4cc70fd033e78145b9ea5780ff19d45c595906c0ea269c0c&);
+	--app-blur: 6px;
+	--app-margin: 0px;
+	--app-radius: 8px;
+	/* ACCENT HSL AND TEXT COLOR SETTINGS */
+	--accent-hue: 170;
+	--accent-saturation: 83%;
+	--accent-lightness: 81%;
+	--accent-opacity: 0.8;
+	--accent-text-color: hsl(0,0%,100%);
+	/* SIDEBARS AND CHAT AREA COLOR SETTINGS */
+	--sidebar-color: hsl(0,0%,0%,0.34);
+	--main-content-color: hsl(0,0%,0%,0.27);
+	/* MESSAGE SETTINGS */
+	--message-color: hsl(0,0%,0%,0.06);
+	--message-color-hover: hsl(0,0%,0%,0.28);
+	--message-radius: 19px;
+	--message-padding-top: 6px;
+	--message-padding-side: 8px;
+	/* REPLY HSL COLOR SETTINGS */
+	--reply-hue: 107;
+	--reply-saturation: 79%;
+	--reply-lightness: 64%;
+	--reply-opacity: 1;
+	/* TEXTAREA SETTINGS */
+	--textarea-color: 255,255,255;
+	--textarea-alpha: 0.125;
+	--textarea-alpha-focus: 0.165;
+	--textarea-text-color: hsl(0,0%,100%);
+	--textarea-radius: 28px;
+	/* CARD SETTINGS */
+	--card-color: hsl(0,0%,100%,0.14);
+	--card-color-hover: hsl(0,0%,100%,0.18);
+	--card-color-select: hsl(0,0%,100%,0.21);
+	--card-radius: 18px;
+	/* BUTTON SETTINGS */
+	--button-height: 32px;
+	--button-padding: 16px;
+	--button-action-color: hsl(0,0%,0%);
+	--button-radius: 16px;
+	/* POPOUT SETTINGS */
+	--popout-color: hsl(0,0%,0%,0.46);
+	--popout-blur: 6px;
+	--popout-radius: 18px;
+	--popout-shadow: 0 4px 4px hsl(0,0%,0%,0.44);
+	--popout-shadow-border: inset 0 1px 1px hsl(0,100%,100%,0.35), inset 0 -1px 2px hsl(0,0%,0%,0.25), inset 0 0 0 1px hsl(0,100%,100%,0.04); /* Set this variable to none to remove the popout liquid glass border */
+	/* LIQUID GLASS SETTINGS */
+	--light-angle: 40deg;
+	/* Remove the opening and closing comment brackets to remove the liquid glass shadow */
+	/*--liquid-glass-shadow: none;*/
+}
+
+@supports (color: color-mix(in lch, red, blue)) {
+	.theme-dark {
+		/* TEXT COLOR SETTINGS */
+		--text-primary: hsl(0,0%,100%);
+		--text-secondary: hsl(0,0%,77%);
+		--text-default: hsl(0,0%,86%);
+		--text-muted: hsl(0,0%,72%);
+		--channels-default: hsl(0,0%,73%);
+		--channel-icon: hsl(0,0%,73%);
+		--text-strong: hsl(0,0%,100%);
+		/* ICON COLOR SETTINGS */
+		--icon-primary: hsl(0,0%,96%);
+		--icon-secondary: hsl(0,0%,84%);
+		--icon-tertiary: hsl(0,0%,71%);
+		/* INTERACTIVE COLOR SETTINGS */
+		--interactive-normal: hsl(0,0%,79%);
+		--interactive-hover: hsl(0,0%,91%);
+		--interactive-active: hsl(0,0%,100%);
+		--interactive-muted: hsl(0,0%,43%);
+		/* BACKGROUND MODIFIER SETTINGS */
+		--background-modifier-hover: hsl(0,0%,100%,0.075);
+		--background-modifier-active: hsl(0,0%,100%,0.1);
+		--background-modifier-selected: hsl(0,0%,100%,0.125);
+		--background-modifier-accent: hsl(0,0%,100%,0.175);
+		--background-primary: transparent;
+		/* ACCENT COLORED TEXT AND LINK SETTINGS */
+		--text-brand: hsl(var(--accent-hsl));
+		--text-link: hsl(var(--accent-hsl));
+		/* Remove background image */
+		body, .appMount, .appMount-3lHmkl
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FROM DISCORD SQUARE THEME, LAST UPDATED 3 YEARS AGO AND SOMEHOW THIS METHOD STILL WORKS WITH THE NEW DISCORD UI*/
+
+
+/* Profile Icons */
+
+div[class*="avatar"],
+img[class*="avatar"] {
+	/* For the sake of making this snippet work without the styling applied by the rest of this theme */
+	border-radius: 0px;
+}
+
+a[aria-label*="group"] div > svg > foreignObject {
+	/* Group DMs will have an Offline status without this */
+	border-bottom-width: 0px !important;
+}
+
+svg > rect[mask*="svg-mask-status"] {
+	/* Hide statuses in @mention autocomplete listings, no good way to add an underline */
+	display: none;
+}
+
+div[class*="avatar"][aria-label$="Online via Mobile"] > svg > foreignObject,
+div[class*="headerAvatar"][aria-label$="Online via Mobile"] > svg > foreignObject,
+div[class*="listAvatar"][aria-label$="Online via Mobile"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-mobile);
+}
+
+div[class*="avatar"][aria-label$="Online"] > svg > foreignObject,
+div[class*="headerAvatar"][aria-label$="Online"] > svg > foreignObject,
+div[class*="listAvatar"][aria-label$="Online"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-online);
+}
+
+div[class*="avatar"][aria-label$="Idle"] > svg > foreignObject,
+div[class*="headerAvatar"][aria-label$="Idle"] > svg > foreignObject,
+div[class*="listAvatar"][aria-label$="Idle"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-idle);
+}
+
+div[class*="avatar"][aria-label$="Disturb"] > svg > foreignObject,
+div[class*="headerAvatar"][aria-label$="Disturb"] > svg > foreignObject,
+div[class*="listAvatar"][aria-label$="Disturb"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-dnd);
+}
+
+div[class*="avatar"][aria-label$="Offline"] > svg > foreignObject,
+div[class*="headerAvatar"][aria-label$="Offline"] > svg > foreignObject,
+div[class*="listAvatar"][aria-label$="Offline"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-offline);
+}
+
+div[class*="avatar"][aria-label$="Invisible"] > svg > foreignObject,
+div[class*="headerAvatar"][aria-label$="Invisible"] > svg > foreignObject,
+div[class*="listAvatar"][aria-label$="Invisible"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-offline);
+}
+
+div[class*="headerAvatar"] > svg > foreignObject,
+div[class*="listAvatar"] > svg > foreignObject {
+	border-bottom-width: var(--sq-profile-status-size) !important;
+}
+
+div[class*="avatar"] svg > rect,
+div[class*="headerAvatar"] > svg > rect,
+div[class*="listAvatar"] > svg > rect {
+	display: none;
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Online via Mobile"] > svg[class^="mask"] > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-mobile);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Online via Mobile"] > svg > svg[class*="dots"] {
+	color: var(--sq-mobile);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Online"] > svg[class^="mask"] > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-online);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Online"] > svg > svg[class*="dots"] {
+	color: var(--sq-online);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Idle"] > svg[class^="mask"] > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-idle);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Idle"] > svg > svg[class*="dots"] {
+	color: var(--sq-idle);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Disturb"] > svg[class^="mask"] > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-dnd);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Disturb"] > svg > svg[class*="dots"] {
+	color: var(--sq-dnd);
+}
+
+div[class*="avatar"] > div[class*="wrapper"] > svg[class^="mask"] > foreignObject {
+	/* Offline by default, it's not in the label */
+	border: 0px solid rgba(0,0,0,0);
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-offline);
+}
+
+div[class*="avatar"] > div[class*="wrapper"] > svg > svg[class*="dots"] {
+	/* Offline by default, it's not in the label */
+	color: var(--sq-offline);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Invisible"] > svg > foreignObject {
+	border-bottom: var(--sq-profile-status-size) solid var(--sq-offline);
+}
+
+div[class*="avatar"] > div[class*="wrapper"][aria-label$="Invisible"] > svg > svg[class*="dots"] {
+	color: var(--sq-offline);
+}
+
+div[class*="avatar"] > div[class*="wrapper"] > svg > svg[class*="dots"] > g > circle {
+	/* Move and scale typing indicator */
+	cx: 8.5;
+	cy: 5;
+	r: 5;
+}
+
+svg[class*="avatarHint"] {
+	/* That little overlay "View Profile" when you hover over a profile picture in a popout */
+	border-radius: 0px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+	svg[class*="avatarHint"] > foreignObject {
+		/* That little overlay "View Profile" when you hover over a profile picture in a popout */
+		mask: none;
+		border-bottom-width: 0px !important;
+	}
+
+div[role="img"] > svg > foreignObject, /* Removes rounding from icons in the Members list */
+div[class^="voiceUserSummary"] > div > svg > foreignObject, /* Removes bevels from user icons under a collapsed category with an active VC */
+div[class^="tooltip"] > div > div > svg > foreignObject, /* Removes bevels from user icons when there are people in a VC in a server tooltip */
+div[class*="callContainer"] svg > foreignObject { /* Makes avatars square in Discord video/voice calls */
+	mask: none;
+	-webkit-mask: none;
+}
+
+div[class*="callContainer"] div[class*="wrapper"]::after {
+	/* Make the flashing video/voice call border square */
+	border-radius: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MY OWN EDITED AND REVISIONED OF SKEUOCORD*/
+
+/*keeps the server buttons sane i guess*/
+
+.svg_cc5dd2 {
+	contain: none !important;
+}
+
+.wrapper_cc5dd2 foreignObject {
+	mask: none !important;
+}
+
+	.wrapper_cc5dd2 foreignObject:not(.folderButton__48112 foreignObject) {
+		overflow: visible;
+	}
+
+
+/*upscales server buttons*/
+
+.listItem__650eb .blobContainer_e5445c, .wrapper_cc5dd2 .wrapper__6e9f8, .icon__6e9f8, .listItem__650eb .circleIconButton__5bc7e, .tutorialContainer__650eb .listItemWrapper__91816, .tutorialContainer__650eb + .listItem__650eb .listItemWrapper__91816, .tutorialContainer__1f388 .listItemWrapper__91816, .tutorialContainer__1f388 .wrapper__6e9f8 .childWrapper__6e9f8 {
+	height: 48px;
+	width: 48px;
+}
+
+/*keeps the other server buttons sane i guess*/
+
+.icon__11cf1, .circleIconButton__5bc7e {
+	border-radius: 50px;
+	transition: background 0.2s ease-out !important;
+}
+
+/*extends server image to support square icon*/
+
+.blobContainer_e5445c:hover .wrapper__6e9f8 img, .wrapper__6e9f8.selected__6e9f8 img, .wrapper__6e9f8:hover .childWrapper__6e9f8, .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8, .wrapper__6e9f8:hover .childWrapper__6e9f8 img, .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 img {
+	border-radius: 5px;
+	transition: background 0.2s ease-out, border-radius 0.2s ease-out !important;
+}
+
+/*border for server icons*/
+
+.listItem__650eb:not(.frame_aa90f4) .wrapper__6e9f8::before, .circleIconButton__5bc7e::before, .wrapper_ef3116.guilds__5e434.theme-dark .listItem__650eb:not(.frame_aa90f4) .wrapper__6e9f8::before, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e::before {
+	content: "";
+	width: 48px;
+	height: 48px;
+	position: fixed;
+	border-radius: 50px;
+	box-shadow: inset 0 0 0 1px rgba(108, 255, 105, 0.4), inset 0 0 0 2px rgba(161, 255, 251, 0.4) !important;
+	transition: background 0.2s ease-out, border-radius 0.2s ease-out !important;
+}
+
+/*creates anim from circle to square server icon*/
+
+.wrapper__6e9f8:hover::before, .wrapper__6e9f8.selected__6e9f8::before, .circleIconButton__5bc7e:hover::before, .circleIconButton__5bc7e.selected__6e9f8::before, .circleIconButton__5bc7e.selected__5bc7e::before, .wrapper_ef3116.guilds__5e434.theme-dark.wrapper__6e9f8:hover::before, .wrapper_ef3116.guilds__5e434.theme-dark .wrapper__6e9f8.selected__6e9f8::before, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e:hover::before, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e.selected__6e9f8::before, .blobContainer_e5445c:hover .wrapper__6e9f8::before, .blobContainer_e5445c:hover .circleIconButton__5bc7e::before, .wrapper_ef3116.guilds__5e434.theme-dark .blobContainer_e5445c:hover .wrapper__6e9f8::before, .wrapper_ef3116.guilds__5e434.theme-dark .blobContainer_e5445c:hover .circleIconButton__5bc7e::before, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e.selected__5bc7e::before {
+	border-radius: 5px !important;
+	transition: background 0.2s ease-out, border-radius 0.2s ease-out !important;
+}
+
+/*creates shadow for server icons*/
+
+.theme-dark .wrapper__6e9f8:not(.innerFrame_aa90f4), .wrapper_ef3116.guilds__5e434.theme-dark .wrapper__6e9f8:not(.innerFrame_aa90f4) {
+	box-shadow: 0 0 2px 2px rgba(0,0,0,0.4);
+	border-radius: 50px;
+	transition: background 0.2s ease-out, border-radius 0.2s ease-out !important;
+}
+
+/*makes server icons in folders become circles instead of shaped to area of folder, with a border and shadow*/
+
+.icon_f34534.iconSizeMini_f34534, .wrapper_ef3116.guilds__5e434.theme-dark .icon_f34534.iconSizeMini_f34534, .outer_c0bea0.theme-dark .iconSizeSmol_f34534, .title_c38106 .iconSizeSmol_f34534 {
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.6), 0 0 2px 2px rgba(0,0,0,0.15);
+	border-radius: 999px !important;
+	/*minimized folder server icons*/
+}
+
+/*what keeps server icons in folders to not be cut in half*/
+
+.folderGroup__48112.isExpanded__48112 .stack_dbd263 {
+	height: calc(100%) !important;
+	overflow: visible !important;
+}
+
+ /*what makes the server icons fit in the circle expand*/
+
+.wrapper__4e6ce .mask__0fa6d foreignObject[mask="url(#svg-mask-avatar-default)"] .guildIcon__0fa6d, .mask_ca5f52 foreignObject[mask="url(#svg-mask-avatar-default)"] .icon_ca5f52, .wrapper_cc5dd2 .icon__6e9f8 {
+	border-radius: 50px;
+}
+
+/*adapts server shadow from circle to square when needed*/
+
+.wrapper__6e9f8:hover, .circleIconButton__5bc7e:hover, .wrapper__6e9f8.selected__6e9f8, .circleIconButton__5bc7e.selected__6e9f8, .circleIconButton__5bc7e.selected__5bc7e, .blobContainer_e5445c:hover .wrapper__6e9f8, .blobContainer_e5445c:hover .circleIconButton__5bc7e, .wrapper_ef3116.guilds__5e434.theme-dark .wrapper__6e9f8:hover, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e:hover, .wrapper_ef3116.guilds__5e434.theme-dark .wrapper__6e9f8.selected__6e9f8, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e.selected__6e9f8, .wrapper_ef3116.guilds__5e434.theme-dark .blobContainer_e5445c:hover .wrapper__6e9f8, .wrapper_ef3116.guilds__5e434.theme-dark .blobContainer_e5445c:hover .circleIconButton__5bc7e, .wrapper_ef3116.guilds__5e434.theme-dark .circleIconButton__5bc7e.selected__5bc7e {
+	border-radius: 5px !important;
+	transition: background 0.2s ease-out, border-radius 0.2s ease-out !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MY REVISIONED OLDCORD CSS*/
+
+/*allows the use of custom icons for the discord DM button*/
+
+.tutorialContainer__1f388 .wrapper__6e9f8 .childWrapper__6e9f8 {
+	background: url("https://cdn.discordapp.com/attachments/1311061044310970499/1537769959608815626/msn.png?ex=6a803f60&is=6a7eede0&hm=d76bb59c65c905fbf947ecb8e450c76c494e107df44ce1762180e7020ec02a94&") center / cover no-repeat !important;
+}
+
+/*removes the discord icon from the discord DM button*/
+
+.childWrapper__6e9f8 svg {
+	display: none !important;
+}
+
+/*aligns 2020 discord text at top left*/
+
+.bar_c38106:not(.systemBar_c38106):not(:has(.channelTabs-trailing)) {
+	padding: 0 12px 0 !important;
+	height: 50px;
+	margin-top: -10px;
+}
+
+/*removes trash server text at top, brings 2020 discord text to exist top left*/
+
+.bar_c38106 .title_c38106 {
+	margin-top: -20px;
+	margin-bottom: 30px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -2.38419e-7 52.99 10'%3E%3Cpath d=' M3.57642276,0.141304348 L0,0.141304348 L0,4.22826087 L2.38069106,6.40217391 L2.38069106,2.43478261 L3.66260163,2.43478261 C4.47052846,2.43478261 4.86910569,2.83695652 4.86910569,3.4673913 L4.86910569,6.5 C4.86910569,7.13043478 4.49207317,7.55434783 3.66260163,7.55434783 L0,7.55434783 L0,9.85869565 L3.57642276,9.85869565 C5.49390244,9.86956522 7.29288618,8.90217391 7.29288618,6.66304348 L7.29288618,3.39130435 C7.29288618,1.13043478 5.49390244,0.141304348 3.57642276,0.141304348 Z M22.3310976,6.67391304 L22.3310976,3.32608696 C22.3310976,2.11956522 24.4640244,1.83695652 25.1103659,3.05434783 L27.0817073,2.23913043 C26.3168699,0.510869565 24.8949187,0 23.7207317,0 C21.803252,0 19.9073171,1.13043478 19.9073171,3.32608696 L19.9073171,6.67391304 C19.9073171,8.88043478 21.803252,10 23.6776423,10 C24.8841463,10 26.3276423,9.39130435 27.1247967,7.81521739 L25.0134146,6.82608696 C24.4963415,8.17391304 22.3310976,7.84782609 22.3310976,6.67391304 Z M15.8030488,3.7826087 C15.0597561,3.61956522 14.5642276,3.34782609 14.5319106,2.88043478 C14.575,1.75 16.2878049,1.7173913 17.2896341,2.79347826 L18.8731707,1.55434783 C17.8821138,0.326086957 16.7617886,0 15.598374,0 C13.8424797,0 12.1404472,1 12.1404472,2.91304348 C12.1404472,4.77173913 13.5408537,5.76086957 15.0813008,6 C15.8676829,6.10869565 16.7402439,6.42391304 16.7186992,6.97826087 C16.654065,8.02173913 14.5426829,7.9673913 13.5839431,6.7826087 L12.0650407,8.23913043 C12.9591463,9.40217391 14.1764228,10 15.3182927,10 C17.074187,10 19.0239837,8.9673913 19.0993902,7.08695652 C19.2071138,4.69565217 17.5050813,4.09782609 15.8030488,3.7826087 Z M8.59634146,9.85869565 L11.0093496,9.85869565 L11.0093496,0.141304348 L8.59634146,0.141304348 L8.59634146,9.85869565 Z M49.2835366,0.141304348 L45.7071138,0.141304348 L45.7071138,4.22826087 L48.0878049,6.40217391 L48.0878049,2.43478261 L49.3589431,2.43478261 C50.1668699,2.43478261 50.5654472,2.83695652 50.5654472,3.4673913 L50.5654472,6.5 C50.5654472,7.13043478 50.1884146,7.55434783 49.3589431,7.55434783 L45.6963415,7.55434783 L45.6963415,9.85869565 L49.2727642,9.85869565 C51.1902439,9.86956522 52.9892276,8.90217391 52.9892276,6.66304348 L52.9892276,3.39130435 C53,1.13043478 51.2010163,0.141304348 49.2835366,0.141304348 Z M31.7353659,0 C29.753252,0 27.7819106,1.09782609 27.7819106,3.33695652 L27.7819106,6.66304348 C27.7819106,8.89130435 29.7640244,10 31.7569106,10 C33.7390244,10 35.7103659,8.89130435 35.7103659,6.66304348 L35.7103659,3.33695652 C35.7103659,1.10869565 33.7174797,0 31.7353659,0 Z M33.2865854,6.66304348 C33.2865854,7.35869565 32.5109756,7.7173913 31.7461382,7.7173913 C30.9705285,7.7173913 30.1949187,7.36956522 30.1949187,6.66304348 L30.1949187,3.33695652 C30.1949187,2.61956522 30.9489837,2.23913043 31.7030488,2.23913043 C32.4894309,2.23913043 33.2865854,2.58695652 33.2865854,3.33695652 L33.2865854,6.66304348 Z M44.3605691,3.33695652 C44.3067073,1.05434783 42.7770325,0.141304348 40.8056911,0.141304348 L36.9815041,0.141304348 L36.9815041,9.86956522 L39.4268293,9.86956522 L39.4268293,6.77173913 L39.8577236,6.77173913 L42.0768293,9.85869565 L45.0930894,9.85869565 L42.4861789,6.52173913 C43.6495935,6.15217391 44.3605691,5.14130435 44.3605691,3.33695652 Z M40.8487805,4.65217391 L39.4268293,4.65217391 L39.4268293,2.43478261 L40.8487805,2.43478261 C42.3784553,2.43478261 42.3784553,4.65217391 40.8487805,4.65217391 Z%0A' fill='%2372767d'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	transform: translateY(40px) translateX(12px) scale(1.01);
+	width: 100px;
+    }
+
+	.bar_c38106 .title_c38106 [data-text-variant="text-sm\/medium"] {
+		display: none;
+	}
+
+/*removes trash server text at top from appearing elsewhere*/
+
+{
+	display: none;
+}
+
+/*weird bug that brings tiny server icon to overlap 2020 discord text, this removes it*/
+
+.guildIcon_edbb22 {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MIX OF DIFFERENT SOURCES*/
+
+:root {
+	/*RIPPED FROM RADIAL STATUS*/
+	/*Spacing*/
+	--rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+	--rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+	--rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+	/*Widths*/
+	--rs-small-width: 2; /* Thickness of status border for members list/dms | MUST end in px */
+	--rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+	--rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+	/*Shape*/
+	--rs-avatar-shape: 0%; /* 50% for round - 0% for square */
+	/*Colours*/
+	--rs-online-color: #43b581; /* Colour for online status */
+	--rs-idle-color: #faa61a; /* Colour for idle status */
+	--rs-dnd-color: #f04747; /* Colour for dnd status */
+	--rs-offline-color: #636b75; /* Colour for offline status */
+	--rs-streaming-color: #643da7; /* Colour for streaming status */
+	--rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+	--rs-self-speaking-color: #57d39b; /* Colour for speaking ring in the bottom left while in a voice chat/call */
+	--rs-phone-color: var(--rs-online-color); /* Colour of the ring & phone icon  */
+	/* Others*/
+	--rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+	/*RIPPED FROM SKEOUCORD, JUST FOR AVATAR BORDER COLORS*/
+	/*Avatar Border Radiuses*/
+	--maskradius: 2px; /*default: 2px*/
+	--avatarradius: 3px; /*default: 3px*/
+	--smallavatarradius: 2px; /*default: 2px*/
+	--medavatarradius: 4px; /*default: 4px*/
+	--largeavatarradius: 5px; /*default: 5px*/
+	/*Avatar Borders*/
+	--smallborder_dark: 2px solid rgb(255, 255, 255); /*default: 2px solid rgba(152,152,153)*/
+	--chatborder_dark: 0 0 0 2px rgb(255, 255, 255), 0 0 4px 4px rgb(255, 255, 255); /*controlls sidebar and main chat profile borders*/
+	--medborder_dark: 0 0 0 3px rgb(255, 255, 255), 0 0 4px 4px rgb(255, 255, 255); /*controlls profile card border*/
+	--largeborder_dark: 0 0 0 4px rgb(255, 255, 255), 0 0 5px 5px rgb(255, 255, 255); /*default: 0 0 0 4px rgba(230,230,230,0.6), 0 0 5px 5px rgba(0,0,0,0.6)*/
+	/*Avatar Code*/
+	.theme-light .avatar_ec3b75.wrapper__44b0c, .user-profile-popout.theme-light .wrapper__44b0c:not(.avatar__9ac28 .wrapper__44b0c), .outer_c0bea0.user-profile-sidebar.theme-light .wrapper__44b0c:not(.listAvatar__9d78f):not(.row__89036 .wrapper__44b0c):not(.avatar__9ac28 .wrapper__44b0c)
+	/*main chat pfp border, and thickens it for the pfp card?*/
+	.avatar_ec3b75.wrapper__44b0c, .custom-user-profile-theme.theme-dark .avatar_ec3b75.wrapper__44b0c, .user-profile-popout.theme-dark .wrapper__44b0c:not(.avatar__9ac28 .wrapper__44b0c), .outer_c0bea0.user-profile-sidebar.theme-dark .wrapper__44b0c:not(.listAvatar__9d78f):not(.row__89036 .wrapper__44b0c):not(.avatar__9ac28 .wrapper__44b0c), .avatarWrapper_fb62e2.wrapper__44b0c, .theme-light .avatarWrapper_fb62e2.wrapper__44b0c, .wrapper_f910d0
+	
+	/*mini profile editing*/
+
+{
+	border: 1px solid rgb(255, 255, 255) !important;
+	box-shadow: var(--medborder_dark) !important;
+	border-radius: var(--avatarradius) !important;
+	/*user profile popout avatar*/
+}
+
+/*main chat pfp border*/
+
+.avatar_c19a55, .theme-light .previewContainer__981c8 .theme-dark .messageContainer__981c8 .message__5126c .contents_c19a55 .avatar_c19a55 {
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgb(255, 255, 255);
+	box-shadow: var(--chatborder_dark);
+	border-radius: var(--avatarradius);
+	margin-top: 3px;
+	/*chat avatar placement margins & mask*/
+}
+
+/*sidebar pfp border*/
+
+.wrapper__44b0c:not(.nick__0a95c .wrapper__44b0c):not(.user-profile-modal-v2.theme-light .wrapper__44b0c):not(.avatar__9ac28 .wrapper__44b0c) {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: var(--chatborder_dark);
+	border-radius: var(--avatarradius);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*COLORED GLOW BASED ON USER STATUS FOR SIDEBARS AND PROFILE CARDS*/
+
+/*colored glow for online status*/
+
+#app-mount .wrapper__44b0c:has(rect[fill="#23a55a"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#40a258"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#43a25a"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#45a366"]) {
+	box-shadow: 0 0 0 2px var(--rs-online-color), 0 0 4px 4px var(--rs-online-color) !important;
+}
+
+/*colored glow for idle status*/
+
+#app-mount .wrapper__44b0c:has(rect[fill="#f0b232"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#cc954c"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#ca9654"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#ffc04e"]) {
+	box-shadow: 0 0 0 2px var(--rs-idle-color), 0 0 4px 4px var(--rs-idle-color) !important;
+}
+
+/*colored glow for dnd status*/
+
+#app-mount .wrapper__44b0c:has(rect[fill="#f23f43"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#d83a41"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#d83a42"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#da3e44"]) {
+	box-shadow: 0 0 0 2px var(--rs-dnd-color), 0 0 4px 4px var(--rs-dnd-color) !important;
+}
+
+/*STREAMING*/
+
+#app-mount .wrapper__44b0c:has(rect[fill="#593695"]),
+#app-mount .wrapper__44b0c:has(rect[mask*="streaming"]),
+#app-mount .wrapper__44b0c:has(rect[fill*="var(--status-purple)"]) {
+	box-shadow: 0 0 0 2px var(--rs-streaming-color), 0 0 4px 4px var(--rs-streaming-color) !important;
+}
+
+/*INVISIBLE*/
+
+#app-mount .wrapper__44b0c:has(rect[fill="#747f8d"]),
+#app-mount .wrapper__44b0c:has(rect[fill="#747f8d"]) {
+	box-shadow: 0 0 0 2px var(--rs-invisible-color), 0 0 4px 4px var(--rs-invisible-color) !important;
+}
+
+
+/*NORMAL OFFLINE MEMBER*/
+#app-mount .member__5d473.offline__5d473 .wrapper__44b0c {
+	color: var(--rs-offline-color) !important;
+	opacity: 0.6 !important;
+	border: none !important;
+	box-shadow: 0 0 0 2px var(--rs-offline-color), 0 0 4px 4px var(--rs-offline-color) !important;
+}
+
+/*SELECTED OFFLINE MEMBER*/
+#app-mount .member__5d473.offline-selected-fix .wrapper__44b0c {
+	color: var(--rs-offline-color) !important;
+	opacity: 0.6 !important;
+	border: none !important;
+	box-shadow: 0 0 0 2px var(--rs-offline-color), 0 0 4px 4px var(--rs-offline-color) !important;
+}
+
+/*makes the offline users a bit more visible*/
+#app-mount .member__5d473.offline__5d473 {
+	opacity: 1 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*COLORED BORDER BASED ON USER STATUS FOR MAIN CHAT, USES CUSTOM .TS FILE WHICH IS AT "C:\Users\Cain\Documents\Vencord\src\userplugins\chatAvatarStatus\index.ts"*/
+
+/* removes weird border glitch*/
+
+.avatar_c19a55[data-chat-status] {
+	border: 1px solid currentColor !important;
+	border-radius: var(--avatarradius) !important;
+	box-sizing: border-box !important;
+}
+
+/*colored border for online status*/
+
+.avatar_c19a55[data-chat-status="online"] {
+	color: var(--rs-online-color) !important;
+	box-shadow: 0 0 0 2px var(--rs-online-color), 0 0 4px 4px var(--rs-online-color) !important;
+}
+
+/*colored border for idle status*/
+
+.avatar_c19a55[data-chat-status="idle"] {
+	color: var(--rs-idle-color) !important;
+	box-shadow: 0 0 0 2px var(--rs-idle-color), 0 0 4px 4px var(--rs-idle-color) !important;
+}
+
+/*colored border for dnd status*/
+
+.avatar_c19a55[data-chat-status="dnd"] {
+	color: var(--rs-dnd-color) !important;
+	box-shadow: 0 0 0 2px var(--rs-dnd-color), 0 0 4px 4px var(--rs-dnd-color) !important;
+}
+
+/* STREAMING */
+.avatar_c19a55[data-chat-status="streaming"] {
+	color: var(--rs-streaming-color) !important;
+	box-shadow: 0 0 0 2px var(--rs-streaming-color), 0 0 4px 4px var(--rs-streaming-color) !important;
+}
+
+/*colored border/glow for offline status*/
+
+.avatar_c19a55[data-chat-status="offline"] {
+	color: var(--rs-offline-color) !important;
+	box-shadow: 0 0 0 2px var(--rs-offline-color), 0 0 4px 4px var(--rs-offline-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MY CUSTOM EFFECTS FOR THE AERO/GLASS EFFECTS ON MOST THINGS*/
+
+/*SERVER MEMBER LIST*/
+
+/*creates aero effect for entire server member list*/
+
+.members_c8ffbb {
+	background: var(--server-folder-color);
+	box-shadow: var(--liquid-glass-shadow);
+	border-radius: var(--popout-radius);
+}
+
+/*creates aero effect for individual member cards on server list*/
+
+.member_c8ffbb {
+	background: var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	margin: 2px 6px !important;
+	transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+	/*better hover effects for server member list */
+
+	.member_c8ffbb:hover {
+		background: var(--card-color-hover) !important;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CHANNEL SELECTION*/
+
+/*creates aero effect for individual channels*/
+
+.link__2ea32 {
+	background: var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	margin: 2px 2px !important;
+	transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/*creates hover effects for individual channels*/
+
+.link__2ea32:hover {
+	background: var(--card-color-hover) !important;
+}
+
+.selectedChannel__2ea32 .link__2ea32 {
+	background: var(--card-color-select) !important;
+}
+
+/*creates aero effect for channel selection area*/
+
+.sidebarList__5e434 {
+	background: var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CHAT AREA*/
+
+/*creates aero effect for invidiual messages*/
+
+	.messageListItem__5126c .message__5126c {
+		background: var(--server-folder-color) !important;
+		border-radius: var(--message-radius) !important;
+		box-shadow: var(--liquid-glass-shadow) !important;
+		transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+	}
+
+/*hover effects for invidiual messages*/
+
+	.messageListItem__5126c:hover .message__5126c {
+		background: var(--card-color-hover) !important;
+	}
+
+
+/*fixes consecutive messages in total breaking glass effect*/
+
+	.messageListItem__5126c.lg-continuation {
+		margin-top: -2px !important;
+	}
+
+
+/*fixes consecutive messages first message breaking glass effect*/
+
+	.messageListItem__5126c.lg-first .message__5126c {
+		border-radius: var(--message-radius) var(--message-radius) 0 0 !important;
+		box-shadow: inset 0 1px 1px hsl(0, 100%, 100%, 0.35), inset 1px 0 0 hsl(0, 100%, 100%, 0.04), inset -1px 0 0 hsl(0, 100%, 100%, 0.04) !important;
+	}
+
+
+/*fixes consecutive messages middle section breaking glass effect*/
+
+	.messageListItem__5126c.lg-middle .message__5126c {
+		border-radius: 0 !important;
+		box-shadow: inset 1px 0 0 hsl(0, 100%, 100%, 0.04), inset -1px 0 0 hsl(0, 100%, 100%, 0.04) !important;
+	}
+
+
+/*fixes consecutive messages last message breaking glass effect*/
+
+	.messageListItem__5126c.lg-last .message__5126c {
+		position: relative;
+		border-radius: 0 0 var(--message-radius) var(--message-radius) !important;
+		box-shadow: inset 1px 0 0 hsl(0, 100%, 100%, 0.04), inset -1px 0 0 hsl(0, 100%, 100%, 0.04) !important;
+	}
+
+
+/*creates aero effect for main chat area, atleast it does something related to the whole thing*/
+
+.chat_f75fb0 {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	overflow: hidden !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FRIENDS PANEL OF CLIENT*/
+
+/*creates aero effect for friends listed in middle panel*/
+
+.peopleListItem_cc6179 {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--message-radius) !important;
+	margin: 4px 8px !important;
+}
+
+	/*creates hover effects*/
+
+	.peopleListItem_cc6179:hover {
+		background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--card-color-hover) !important;
+	}
+
+/*fixes clipping issue for whoever is at the bottom of friends list in middle panel, gets cut in half without this */
+
+.peopleList__5ec2f .content_d125d2 {
+	padding-bottom: 120px !important;
+}
+
+/*creates aero effect for individual DM people list*/
+
+.channel__972a0.dm__972a0 {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	margin: 2px 4px !important;
+	transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/*creates aero effect for friends and quests tab button*/
+
+.channel__972a0.container_e45859:not(.dm__972a0):has(a[href="/channels/@me"]),
+.channel__972a0.container_e45859:not(.dm__972a0):has(a[href="/quest-home"]) {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	margin: 2px 6px !important;
+	transition: background-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/*creates aero effect for middle panel in Friends client panel*/
+
+.peopleColumn__133bf {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, 0.27),
+			rgba(0, 0, 0, 0.27)
+		),
+		var(--server-folder-color) !important;
+
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	overflow: hidden !important;
+}
+
+/*creates aero effect for top middle panel in Friends client panel*/
+
+.container__9293f {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*VOICE CHANNEL*/
+
+/*creates darker overlay for voice participants banner */
+
+.background_fb62e2 {
+	position: relative !important;
+	/* Remove Discord's participant colour */
+	background: transparent !important;
+	background-color: transparent !important;
+	border-radius: var(--popout-radius) !important;
+	overflow: hidden !important;
+	/* Glass edge */
+	box-shadow: var(--liquid-glass-shadow) !important;
+}
+
+	/* Glass surface */
+	.background_fb62e2::after {
+		content: "" !important;
+		position: absolute !important;
+		inset: 0 !important;
+		/* Subtle glass tint */
+		background: rgba(255, 255, 255, 0.06) !important;
+		border-radius: inherit !important;
+		/* Don't block buttons/video/etc */
+		pointer-events: none !important;
+		/* Glass edge/highlight */
+		box-shadow: var(--liquid-glass-shadow) !important;
+	}
+
+/*creates aero effect for voice participants banner*/
+
+.tile__2f4f7.tile__90dc5 {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	border-radius: var(--popout-radius) !important;
+	overflow: hidden !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+}
+
+/* Remove Discord's individual participant colour */
+.background_fb62e2 {
+	background: transparent !important;
+	background-color: transparent !important;
+}
+
+/*creates aero effect for banners in MINI PROFILE*/
+
+.outer_c0bea0.user-profile-popout
+.fill_f7e69e.banner__68edb {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+}
+
+/*creates aero effect for banner in FULL PROFILE*/
+
+.outer_c0bea0.user-profile-modal-v2
+.fill_f7e69e.banner__68edb {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+}
+
+/*creates aero effect for exrta server list buttons*/
+
+.circleIconButton__5bc7e {
+	background: linear-gradient( rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27) ), var(--server-folder-color) !important;
+	box-shadow: var(--liquid-glass-shadow) !important;
+	border-radius: var(--popout-radius) !important;
+	transition: background 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/*creates aero effect for different options in voice channel*/
+
+.centerControls_bfe55a
+button.centerButton_f1ceac {
+	background: transparent !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+
+/*fixes dropdown for camera options not being aero in voice channel*/
+
+.videoControls_bfe55a
+.contextMenuNub_f1ceac {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+
+/*creates aero effect for voice channel options in person card bottom left*/
+
+.panels__5e434
+button.button_e131a9 {
+	background: rgba(255, 255, 255, 0.08) !important;
+	background-color: rgba(255, 255, 255, 0.08) !important;
+	background-image: none !important;
+	backdrop-filter: blur(12px) saturate(140%) !important;
+	-webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.12) !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
+	border-radius: 8px !important;
+}
+
+/*creates aero effect for noise suppresion panel*/
+
+.noiseCancellationPopout_e131a9 {
+	background: rgba(255, 255, 255, 0.07) !important;
+	background-color: rgba(255, 255, 255, 0.07) !important;
+	background-image: none !important;
+	backdrop-filter: blur(16px) saturate(140%) !important;
+	-webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.12) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.10) !important;
+	border-radius: 10px !important;
+}
+
+/*creates aero effect for voice stats panel*/
+
+.container__50387.popover_d6f39b {
+	background: rgba(255, 255, 255, 0.07) !important;
+	background-color: rgba(255, 255, 255, 0.07) !important;
+	background-image: none !important;
+	backdrop-filter: blur(16px) saturate(140%) !important;
+	-webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.12) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.10) !important;
+	border-radius: 10px !important;
+}
+
+/*hides the annoying ass extra useless banner that appears when you are alone in a voice channel*/
+.root__4ad81.singleUserRoot__4ad81 {
+	display: none !important;
+}
+
+
+
+
+
+
+/* ================================= */
+/* VOICE PARTICIPANT STATUS RINGS    */
+/* ================================= */
+
+/* ONLINE */
+#app-mount .tile__2f4f7:not(.idle__2f4f7) .wrapper__44b0c.avatarWrapper_fb62e2 {
+	border: none !important;
+	box-shadow: 0 0 0 1.5px var(--rs-online-color), 0 0 2px 2px var(--rs-online-color) !important;
+}
+
+
+/* IDLE */
+#app-mount .tile__2f4f7.idle__2f4f7 .wrapper__44b0c.avatarWrapper_fb62e2 {
+	border: none !important;
+	box-shadow: 0 0 0 1.5px var(--rs-idle-color), 0 0 2px 2px var(--rs-idle-color) !important;
+}
+
+/* DM STATUS RING */
+
+#app-mount .channel__972a0.dm__972a0 .wrapper__44b0c {
+	border: none !important;
+	box-shadow: 0 0 0 1.5px var(--rs-offline-color), 0 0 2px 2px var(--rs-offline-color) !important;
+}
+
+/* FRIENDS PANEL STATUS RING */
+
+#app-mount .peopleListItem_cc6179 .wrapper__44b0c.avatar__0a06e {
+	border: none !important;
+	box-shadow: 0 0 0 1.5px var(--rs-offline-color), 0 0 2px 2px var(--rs-offline-color) !important;
+}
+
+
+/* ================================= */
+/* PARTICIPANT AREA HOVER            */
+/* ================================= */
+
+#app-mount .tile_d6271c:hover .tile__2f4f7 .wrapper__44b0c.avatarWrapper_fb62e2 {
+	border: none !important;
+	box-shadow: 0 0 0 1.5px var(--rs-idle-color), 0 0 2px 2px var(--rs-idle-color) !important;
+}
+
+/* ================================= */
+/* VOICE PARTICIPANT STATUS RING     */
+/* ================================= */
+
+/* Keep the actual status colour when Discord removes
+   the idle class while the voice grid is hovered */
+
+#app-mount .tile_d6271c .tile__2f4f7 .wrapper__44b0c.avatarWrapper_fb62e2 {
+	border: none !important;
+	box-shadow: 0 0 0 1.5px var(--rs-idle-color), 0 0 2px 2px var(--rs-idle-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*THINGS TO FIX/ADD*/
+	/*text spacing broke with new aero theme, assuming i accidentally deleted something whilst sorting*/
+	/*server list border/radial status needs to be smaller*/
+	/*adjust windows titlebar to actually go in the corner*/
+	/*add custom border color for groups instead of pure white*/
+	/*make the new radial status in voice channels actually correspond to user status*/
+	/*center the typing anim on peoples profiles*/
+	/*get an actually functioning background that wont break within like 3 damn days*/
+	/*in DMs, person title at top is broken, border issue?*/
+	/*Friends client panel, borders missing glows for middle section and DM list*/
+	/*remove the activity panel on the server members list area, i really hate it*/
