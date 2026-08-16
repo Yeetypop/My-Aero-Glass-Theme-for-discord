@@ -42,3 +42,4 @@ CURRENT ISSUE IVE FOUND WITH ONE OF THE PLUGINS IS THAT AFTER A WHILE IT REQUIRE
 9. Adds border/glows to Profile Icons that change depending on User Status
 10. Removes colored area of a participant in a voice channel - transparent
 11. Removes banner area of a persons profile - transparent
+12. Removes annoying invite panel that shows up when you are alone in a voice channel
