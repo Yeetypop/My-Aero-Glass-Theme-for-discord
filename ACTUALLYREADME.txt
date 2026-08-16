@@ -19,6 +19,8 @@ SKEUOCORD: https://betterdiscord.app/themes/SkeuoCord
 OLDCORD: https://betterdiscord.app/themes/DTM-16  - originally ripped from https://betterdiscord.app/themes/OldCord but if you wanted to use the updated functional version then use the first link
 TRANSLUCENCE: https://betterdiscord.app/themes/Translucence
 DISCORD SQUARE THEME: https://github.com/craftablescience/Discord-Square-Theme
+RADIAL STATUS: https://betterdiscord.app/themes/RadialStatus
+i couldnt find the original link to "animated blur.css" since ive had it for a while and didnt need to reinstall it, atleast the source is there with the authors name in it so
 
 
 THIS THEME HEAVILY DEPENDS ON THE THEME TRANSLUCENCE
