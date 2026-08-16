@@ -18,8 +18,8 @@ THEMES I HAVE RIPPED PARTS FROM TO MAKE THIS FUNCTIONAL:
 3. [Translucence](https://betterdiscord.app/themes/Translucence)
 4. [Discord Square Theme](https://github.com/craftablescience/Discord-Square-Theme)
 5. [Radial Status](https://betterdiscord.app/themes/RadialStatus)
-i couldnt find the original link to "animated blur.css" since ive had it for a while and didnt need to reinstall it, atleast the source is there with the authors name in it so
 
+i couldnt find the original link to "animated blur.css" since ive had it for a while and didnt need to reinstall it, atleast the source is there with the authors name in it so
 
 THIS THEME HEAVILY DEPENDS ON THE THEME TRANSLUCENCE
 
